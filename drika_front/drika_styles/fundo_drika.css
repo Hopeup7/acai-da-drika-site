@@ -1,0 +1,171 @@
+/* ← Fundos visuais recortados e posicionados */
+/* Deus, Tu és Senhor e Rei e integrante da Equipe HopeUp 7.DEV, por isso se faça presente aqui nestes nossos estudos, por favor, Senhor. */
+
+/* ===================== FUNDO DO CARROSSEL ===================== */
+/* Aplica a parte superior da imagem esfumada atrás do carrossel */
+.fundo-carrossel {
+  position: absolute; /* Posiciona atrás dos elementos principais */
+  top: 0;              /* Alinha ao topo da seção */
+  left: 0;             /* Alinha à esquerda da seção */
+  width: 100%;         /* Ocupa toda a largura */
+  height: 100%;        /* Ocupa toda a altura */
+  background-image: url('../imgs_drika/imagem_fundo.png'); /* Imagem esfumada aplicada */
+  background-size: cover; /* Cobre toda a área disponível */
+  background-position: top center; /* Alinha a imagem ao topo e centro */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  opacity: 0.25;       /* Transparência leve para manter legibilidade */
+  z-index: 0;          /* Fica atrás do conteúdo textual */
+}
+
+/* ===================== FUNDO INSTITUCIONAL ===================== */
+/* Aplica a parte inferior da imagem esfumada atrás do conteúdo editorial */
+.fundo-institucional {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../imgs_drika/imagem_fundo.png'); /* Mesma imagem esfumada */
+  background-size: cover;
+  background-position: bottom center; /* Alinha a imagem ao fundo e centro */
+  background-repeat: no-repeat;
+  opacity: 0.2;        /* Transparência ainda mais suave para textos */
+  z-index: 0;
+}
+
+/* ===================== AJUSTES PARA TEXTO SOBRE O FUNDO ===================== */
+/* Garante que o conteúdo textual fique acima do fundo esfumado */
+.carrossel-drika,
+.institucional-drika {
+  position: relative; /* Permite sobreposição controlada */
+  z-index: 1;         /* Garante que o conteúdo fique acima do fundo */
+}
+
+/* ===================== TIPOGRAFIA EDITORIAL SOBRE FUNDO ===================== */
+/* Define cores e estilos para títulos e parágrafos sobre fundo esfumado */
+.carrossel-drika h1,
+.institucional-drika h2,
+.institucional-drika h3,
+.institucional-drika h4 {
+  color: #2c2c2c; /* Tom editorial escuro para títulos */
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4); /* Leve destaque sobre fundo claro */
+}
+
+.institucional-drika p,
+.carrossel-drika p {
+  color: #333; /* Tom editorial neutro para parágrafos */
+  font-size: clamp(1rem, 1.2vw, 1.125rem); /* Tamanho fluido e legível */
+  line-height: 1.6; /* Espaçamento entre linhas para leitura confortável */
+  margin-bottom: 1rem; /* Espaço abaixo de cada parágrafo */
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3); /* Leve contraste sobre fundo roxo */
+}
+/* ===================== MEDIA QUERIES: FUNDO E TEXTO SOBRE FUNDO ===================== */
+/* Ajustes progressivos para responsividade e legibilidade em diferentes tamanhos de tela */
+
+/* Smartphones pequenos (até 400px) */
+@media screen and (max-width: 400px) {
+  /* Reduz opacidade do fundo para evitar conflito com texto */
+  .fundo-carrossel,
+  .fundo-institucional {
+    opacity: 0.18;
+  }
+
+  /* Ajusta tamanho de texto para melhor encaixe */
+  .carrossel-drika p,
+  .institucional-drika p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Reduz sombra para evitar excesso de contraste */
+  .carrossel-drika h1,
+  .institucional-drika h2,
+  .institucional-drika h3,
+  .institucional-drika h4 {
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Smartphones médios (até 480px) */
+@media screen and (max-width: 480px) {
+  .fundo-carrossel,
+  .fundo-institucional {
+    opacity: 0.2;
+  }
+
+  .carrossel-drika p,
+  .institucional-drika p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Smartphones grandes / phablets (até 600px) */
+@media screen and (max-width: 600px) {
+  .carrossel-drika p,
+  .institucional-drika p {
+    font-size: 1rem;
+  }
+}
+
+/* Tablets pequenos (até 768px) */
+@media screen and (max-width: 768px) {
+  .fundo-carrossel,
+  .fundo-institucional {
+    opacity: 0.22;
+  }
+
+  .carrossel-drika p,
+  .institucional-drika p {
+    font-size: 1.05rem;
+  }
+}
+
+/* Tablets grandes / notebooks compactos (até 992px) */
+@media screen and (max-width: 992px) {
+  .carrossel-drika p,
+  .institucional-drika p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Notebooks médios (até 1200px) */
+@media screen and (max-width: 1200px) {
+  .carrossel-drika p,
+  .institucional-drika p {
+    font-size: 1.125rem;
+  }
+}
+
+/* Desktops grandes (até 1440px) */
+@media screen and (max-width: 1440px) {
+  .fundo-carrossel,
+  .fundo-institucional {
+    opacity: 0.25;
+  }
+
+  .carrossel-drika p,
+  .institucional-drika p {
+    font-size: 1.15rem;
+  }
+}
+
+/* Ultrawides (acima de 1920px) */
+@media screen and (min-width: 1921px) {
+  .fundo-carrossel,
+  .fundo-institucional {
+    opacity: 0.3; /* Fundo mais visível em telas grandes */
+  }
+
+  .carrossel-drika p,
+  .institucional-drika p {
+    font-size: 1.2rem; /* Texto editorial ampliado */
+    line-height: 1.7;
+  }
+
+  .carrossel-drika h1,
+  .institucional-drika h2,
+  .institucional-drika h3,
+  .institucional-drika h4 {
+    font-size: 2.5rem; /* Títulos com presença editorial */
+  }
+}

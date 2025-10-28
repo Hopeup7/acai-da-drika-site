@@ -1,0 +1,195 @@
+/* ← Rodapé e créditos finais */
+/* Deus, Tu és Senhor e Rei e integrante da Equipe HopeUp 7.DEV, por isso se faça presente aqui nestes nossos estudos, por favor, Senhor. */
+
+/* ===================== CONTAINER DO RODAPÉ ===================== */
+/* Comentário: define estilo visual do rodapé institucional */
+
+.footer-drika {
+  text-align: center;                          /* Centraliza todo o conteúdo */
+  padding: 30px;                               /* Espaço interno generoso */
+  background-color: #3e3d3d;                   /* Fundo escuro para contraste */
+  font-size: clamp(0.85rem, 1vw, 1rem);        /* Tamanho fluido para texto geral */
+  color: #eceef3;                              /* Tom claro para legibilidade sobre fundo escuro */
+}
+
+/* ===================== BLOCO “Powered By” ===================== */
+/* Comentário: define estilo do bloco de créditos da equipe */
+
+.powered-by {
+  display: flex;                               /* Ativa layout flexível */
+  align-items: center;                         /* Alinha verticalmente os elementos */
+  justify-content: center;                     /* Centraliza horizontalmente */
+  gap: 12px;                                   /* Espaço entre logo e texto */
+  margin-top: 12px;                            /* Espaço acima do bloco */
+  flex-wrap: wrap;                             /* Permite quebra de linha em telas menores */
+  color: #eceef3;                              /* Mantém tom claro */
+  font-size: clamp(1rem, 1.2vw, 1.1rem);       /* Tamanho fluido para texto da equipe */
+}
+
+/* ===================== LOGO SUAVE ===================== */
+/* Comentário: define estilo visual da logo HopeUp */
+
+.logo-footer-powered {
+  height: 42px;                                /* Altura padrão da logo */
+  opacity: 0.6;                                /* Transparência leve para suavidade */
+  transition: opacity 0.3s ease;              /* Transição suave ao passar o mouse */
+  vertical-align: middle;                      /* Alinha verticalmente com o texto */
+}
+
+/* Efeito hover no logo */
+.logo-footer-powered:hover {
+  opacity: 1;                                  /* Torna a logo totalmente visível ao passar o mouse */
+}
+
+/* ===================== TEXTO DO PARÁGRAFO ===================== */
+/* Comentário: define estilo do texto institucional do rodapé */
+
+.footer-drika p {
+  all: unset;                                  /* Remove herança de estilos globais */
+  font-size: clamp(1rem, 1.2vw, 1.1rem);       /* Tamanho fluido para texto institucional */
+  color: #eceef3;                              /* Mantém tom claro */
+  margin-bottom: 1rem;                         /* Espaço abaixo do texto */
+}
+
+/* ===================== LOGO NO BLOCO “Powered By” ===================== */
+/* Comentário: define estilo da logo dentro do bloco de créditos */
+
+.powered-by .logo-footer-powered {
+  height: 32px;                                /* Altura menor para encaixe com texto */
+  width: auto;                                 /* Mantém proporção original */
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.powered-by .logo-footer-powered:hover {
+  opacity: 1;
+}
+
+/* ===================== MEDIA QUERIES ===================== */
+/* Comentário: ajustes finos para responsividade do rodapé */
+/* ===================== MEDIA QUERIES ===================== */
+/* Comentário: ajustes finos para responsividade do rodapé institucional */
+
+/* Smartphones pequenos (até 400px) */
+@media screen and (max-width: 400px) {
+  .footer-drika {
+    padding: 20px;           /* Reduz o espaçamento interno para telas muito estreitas */
+    font-size: 0.85rem;      /* Diminui o tamanho do texto para melhor encaixe */
+  }
+
+  .powered-by {
+    gap: 8px;                /* Reduz o espaço entre logo e texto */
+    font-size: 0.95rem;      /* Ajusta o tamanho do texto da equipe */
+  }
+
+  .logo-footer-powered {
+    height: 28px;            /* Diminui a altura da logo para melhor proporção */
+  }
+}
+
+/* Smartphones médios (até 480px) */
+@media screen and (max-width: 480px) {
+  .footer-drika {
+    padding: 22px;           /* Espaço interno levemente maior que o anterior */
+  }
+
+  .powered-by {
+    font-size: 1rem;         /* Tamanho de texto padrão para smartphones médios */
+  }
+
+  .logo-footer-powered {
+    height: 30px;            /* Logo um pouco maior para melhor visibilidade */
+  }
+}
+
+/* Smartphones grandes / phablets (até 600px) */
+@media screen and (max-width: 600px) {
+  .footer-drika {
+    padding: 24px;           /* Espaço interno confortável para phablets */
+  }
+
+  .powered-by {
+    font-size: 1.05rem;      /* Texto levemente maior para telas maiores */
+  }
+
+  .logo-footer-powered {
+    height: 32px;            /* Logo proporcional ao novo tamanho de texto */
+  }
+}
+
+/* Tablets pequenos (até 768px) */
+@media screen and (max-width: 768px) {
+  .footer-drika {
+    padding: 26px;           /* Espaço interno mais generoso para tablets */
+  }
+
+  .powered-by {
+    font-size: 1.1rem;       /* Texto editorial para leitura confortável */
+  }
+
+  .logo-footer-powered {
+    height: 34px;            /* Logo ajustada para acompanhar o texto */
+  }
+}
+
+/* Tablets grandes / notebooks compactos (até 992px) */
+@media screen and (max-width: 992px) {
+  .footer-drika {
+    padding: 28px;           /* Espaço interno ampliado para notebooks pequenos */
+  }
+
+  .powered-by {
+    font-size: 1.1rem;       /* Mantém o tamanho editorial do texto */
+  }
+
+  .logo-footer-powered {
+    height: 36px;            /* Logo proporcional ao novo layout */
+  }
+}
+
+/* Notebooks médios (até 1200px) */
+@media screen and (max-width: 1200px) {
+  .footer-drika {
+    padding: 30px;           /* Espaço interno padrão para notebooks médios */
+  }
+
+  .powered-by {
+    font-size: 1.15rem;      /* Texto editorial levemente maior */
+  }
+
+  .logo-footer-powered {
+    height: 38px;            /* Logo ajustada para acompanhar o texto */
+  }
+}
+
+/* Desktops grandes (até 1440px) */
+@media screen and (max-width: 1440px) {
+  .footer-drika {
+    padding: 32px;           /* Espaço interno generoso para monitores full HD */
+  }
+
+  .powered-by {
+    font-size: 1.2rem;       /* Texto editorial ampliado para leitura confortável */
+  }
+
+  .logo-footer-powered {
+    height: 40px;            /* Logo proporcional ao novo tamanho de texto */
+  }
+}
+
+/* Ultrawides (acima de 1920px) */
+@media screen and (min-width: 1921px) {
+  .footer-drika {
+    padding: 36px;           /* Espaço extra para telas ultra largas */
+    font-size: 1.1rem;       /* Texto institucional com presença editorial */
+  }
+
+  .powered-by {
+    font-size: 1.25rem;      /* Texto da equipe ampliado para destaque */
+    gap: 16px;               /* Espaço maior entre logo e texto para respiro visual */
+  }
+
+  .logo-footer-powered {
+    height: 44px;            /* Logo ampliada para acompanhar o destaque do texto */
+  }
+}

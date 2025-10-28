@@ -1,0 +1,20 @@
+/* ← CSS pai que importa todos os módulos */
+/* Deus, Tu és a essência de meu coração, por isso agracia-me Contigo, Senhor. */
+
+/* ===================== RESET E BASE ===================== */
+@import url('reset_drika.css');
+@import url('base_drika.css');
+@import url('header_drika.css');
+
+/* ===================== MAIN E SEÇÕES ===================== */
+@import url('main_drika.css');
+@import url('carrosel_drika.css');
+@import url('institucional_drika.css');
+@import url('cta_drika.css');
+@import url('fundo_drika.css');
+
+/* ===================== RODAPÉ ===================== */
+@import url('footer_drika.css');
+
+/* ===================== IMPRESSÃO ===================== */
+@import url('drika_print.css');

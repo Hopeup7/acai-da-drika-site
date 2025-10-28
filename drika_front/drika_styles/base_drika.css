@@ -1,0 +1,115 @@
+/* ← Tipografia, cores e elementos genéricos */
+/* Deus, Tu és Senhor e Rei e integrante da Equipe HopeUp 7.DEV, por isso se faça presente aqui nestes nossos estudos, por favor, Senhor. */
+
+/* ===================== ESPAÇAMENTO ENTRE SEÇÕES ===================== */
+/* Comentário: define espaço vertical entre blocos do <main> */
+main > section {
+  margin-bottom: 3rem; /* Espaço padrão entre seções */
+}
+
+/* ===================== HIERARQUIA TIPOGRÁFICA ===================== */
+/* Comentário: define tamanhos de títulos com responsividade usando clamp() */
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem); /* Título principal */
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);   /* Subtítulo */
+  line-height: 1.4;
+}
+
+h3 {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem); /* Título de seção */
+}
+
+h4 {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);   /* Título auxiliar */
+}
+
+/* ===================== PARÁGRAFOS ===================== */
+/* Comentário: define estilo base para textos corridos */
+
+p {
+  font-size: clamp(0.800rem, 1.0vw, 1.0rem); /* Texto fluido e legível */
+  line-height: 1.6;                          /* Altura de linha confortável */
+  margin-bottom: 1rem;                       /* Espaço entre parágrafos */
+  color: inherit;                            /* Herda cor do body */
+}
+
+/* ===================== LISTAS ===================== */
+/* Comentário: define estilo base para listas ordenadas e não ordenadas */
+
+ul, li {
+  font-size: clamp(0.95rem, 1.1vw, 1rem); /* Tamanho fluido para itens */
+  margin-left: 1rem;                     /* Recuo padrão */
+  line-height: 1.6;                      /* Altura de linha consistente */
+}
+
+/* ===================== MEDIA QUERIES ===================== */
+/* Comentário: ajustes finos de tipografia e espaçamento por faixa de tela */
+
+/* Smartphones pequenos (até 400px) */
+@media screen and (max-width: 400px) {
+  main > section {
+    margin-bottom: 2rem;     /* Reduz espaço entre seções */
+  }
+
+  html, body {
+    font-size: 15px;         /* Fonte base levemente menor */
+  }
+}
+
+/* Smartphones médios (até 480px) */
+@media screen and (max-width: 480px) {
+  html, body {
+    font-size: 15.5px;       /* Ajuste fino para celulares médios */
+  }
+}
+
+/* Smartphones grandes / phablets (até 600px) */
+@media screen and (max-width: 600px) {
+  html, body {
+    font-size: 16px;         /* Fonte base padrão */
+  }
+}
+
+/* Tablets pequenos (até 768px) */
+@media screen and (max-width: 768px) {
+  html, body {
+    font-size: 16px;         /* Mantém legibilidade em tablets */
+  }
+}
+
+/* Tablets grandes / notebooks compactos (até 992px) */
+@media screen and (max-width: 992px) {
+  html, body {
+    font-size: 16.5px;       /* Leve aumento para notebooks pequenos */
+  }
+}
+
+/* Notebooks médios (até 1200px) */
+@media screen and (max-width: 1200px) {
+  html, body {
+    font-size: 17px;         /* Fonte maior para conforto em telas médias */
+  }
+}
+
+/* Desktops grandes (até 1440px) */
+@media screen and (max-width: 1440px) {
+  html, body {
+    font-size: 17.5px;       /* Fonte editorial para monitores full HD */
+  }
+}
+
+/* Ultrawides (acima de 1920px) */
+@media screen and (min-width: 1921px) {
+  html, body {
+    font-size: 18px;         /* Fonte ampla para telas ultra largas */
+  }
+
+  main > section {
+    margin-bottom: 4rem;     /* Mais espaço entre blocos */
+  }
+}

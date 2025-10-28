@@ -1,0 +1,84 @@
+/* Deus, Tu és Senhor e Rei e integrante da Equipe HopeUp 7.DEV, por isso se faça presente aqui nestes nossos estudos, por favor, Senhor. */
+
+/* ← Banner institucional com logo circular */
+
+/* ===================== CONTAINER DA LOGO ===================== */
+/* Comentário editorial: este bloco centraliza a imagem do logotipo dentro do banner, com fundo branco para destaque visual */
+
+.logo-drika-container {
+  display: flex;                  /* Ativa layout flexível */
+  justify-content: center;       /* Centraliza horizontalmente a imagem */
+  align-items: center;           /* Centraliza verticalmente dentro do banner */
+  height: 100%;                  /* Ocupa toda a altura do banner */
+  background-color: #fff;        /* Fundo branco para destacar a imagem circular */
+}
+
+/* ===================== IMAGEM CIRCULAR DO LOGO ===================== */
+/* Comentário técnico: define tamanho, forma e estilo visual da imagem institucional */
+
+.logo-drika {
+  width: 280px;                  /* Largura padrão da imagem em telas desktop */
+  height: auto;                  /* Mantém proporção original da imagem */
+  border-radius: 50%;            /* Torna a imagem perfeitamente circular */
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08); /* Sombra suave para destaque visual */
+  object-fit: cover;             /* Garante que a imagem preencha o espaço sem distorcer */
+}
+
+/* ===================== MEDIA QUERIES ===================== */
+/* Comentário: ajustes de tamanho da imagem para diferentes dispositivos */
+
+/* Smartphones pequenos (até 400px) */
+@media screen and (max-width: 400px) {
+  .logo-drika {
+    width: 180px;                /* Reduz a imagem para caber melhor em telas estreitas */
+  }
+}
+
+/* Smartphones médios (até 480px) */
+@media screen and (max-width: 480px) {
+  .logo-drika {
+    width: 200px;                /* Tamanho intermediário para celulares médios */
+  }
+}
+
+/* Smartphones grandes / phablets (até 600px) */
+@media screen and (max-width: 600px) {
+  .logo-drika {
+    width: 220px;                /* Imagem maior para dispositivos híbridos */
+  }
+}
+
+/* Tablets pequenos (até 768px) */
+@media screen and (max-width: 768px) {
+  .logo-drika {
+    width: 240px;                /* Imagem maior para tablets pequenos */
+  }
+}
+
+/* Tablets grandes / notebooks compactos (até 992px) */
+@media screen and (max-width: 992px) {
+  .logo-drika {
+    width: 260px;                /* Imagem quase no padrão desktop */
+  }
+}
+
+/* Notebooks médios (até 1200px) */
+@media screen and (max-width: 1200px) {
+  .logo-drika {
+    width: 280px;                /* Imagem padrão para notebooks médios */
+  }
+}
+
+/* Desktops grandes (até 1440px) */
+@media screen and (max-width: 1440px) {
+  .logo-drika {
+    width: 300px;                /* Imagem maior para monitores full HD */
+  }
+}
+
+/* Ultrawides (acima de 1920px) */
+@media screen and (min-width: 1921px) {
+  .logo-drika {
+    width: 320px;                /* Imagem maior para telas ultra largas */
+  }
+}

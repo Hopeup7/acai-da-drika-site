@@ -1,0 +1,215 @@
+/* ===================== TÍTULOS INSTITUCIONAIS ===================== */
+/* Define estilo editorial para títulos dentro da seção institucional */
+
+.institucional-drika h2,
+.institucional-drika h3,
+.institucional-drika h4 {
+  font-family: 'Segoe UI', sans-serif; /* Fonte moderna e legível */
+  font-weight: 600;                    /* Peso médio para destaque */
+  color: #2c2c2c;                      /* Tom escuro editorial */
+  margin-bottom: 1rem;                /* Espaço abaixo do título */
+}
+
+/* ===================== PARÁGRAFOS INSTITUCIONAIS ===================== */
+/* Define estilo para textos explicativos e editoriais */
+
+.institucional-drika p {
+  font-size: clamp(1rem, 1.2vw, 1.125rem); /* Tamanho fluido para leitura confortável */
+  line-height: 1.6;                        /* Espaçamento entre linhas para fluidez */
+  color: #333;                             /* Tom neutro editorial */
+  margin-bottom: 1rem;                    /* Espaço abaixo do parágrafo */
+}
+
+/* ===================== LISTAS INSTITUCIONAIS ===================== */
+/* Define estilo para listas editoriais com ícones personalizados */
+
+.institucional-drika ul {
+  padding-left: 1.5rem;                   /* Recuo interno para alinhamento dos itens */
+  margin-bottom: 1.5rem;                  /* Espaço abaixo da lista */
+  list-style: none;                       /* Remove os marcadores padrão (bolinhas) */
+}
+
+/* ===================== ITENS DE LISTA ===================== */
+/* Define estilo para cada item da lista institucional */
+
+.institucional-drika li {
+  margin-bottom: 0.5rem;                  /* Espaço entre os itens */
+  color: #444;                            /* Tom escuro suave para texto */
+}
+
+/* ===================== ÍCONES PERSONALIZADOS ===================== */
+/* Adiciona um símbolo editorial antes de cada item da lista */
+
+.institucional-drika li::before {
+  content: "✦ ";                          /* Símbolo editorial personalizado */
+  color: #6a4fb3;                         /* Tom roxo editorial para destaque */
+  font-weight: bold;                     /* Peso forte para o ícone */
+}
+/* ===================== MEDIA QUERIES: INSTITUCIONAL DRIKA ===================== */
+/* Ajustes progressivos para responsividade e legibilidade em diferentes tamanhos de tela */
+/* ===================== MEDIA QUERIES: INSTITUCIONAL DRIKA ===================== */
+/* Ajustes progressivos para responsividade e legibilidade em diferentes tamanhos de tela */
+
+/* Smartphones pequenos (até 400px) */
+@media screen and (max-width: 400px) {
+  /* Reduz tamanho dos títulos para melhor encaixe em telas estreitas */
+  .institucional-drika h2,
+  .institucional-drika h3,
+  .institucional-drika h4 {
+    font-size: 1.2rem;           /* Títulos mais compactos */
+    margin-bottom: 0.8rem;       /* Espaço menor abaixo dos títulos */
+  }
+
+  /* Ajusta tamanho e espaçamento dos parágrafos para leitura confortável */
+  .institucional-drika p {
+    font-size: 0.9rem;           /* Texto menor para caber melhor */
+    line-height: 1.5;            /* Espaçamento entre linhas reduzido */
+    margin-bottom: 0.8rem;       /* Espaço menor abaixo dos parágrafos */
+  }
+
+  /* Reduz recuo e espaçamento da lista */
+  .institucional-drika ul {
+    padding-left: 1rem;          /* Recuo menor para itens da lista */
+    margin-bottom: 1rem;         /* Espaço menor abaixo da lista */
+  }
+
+  /* Ajusta espaçamento entre itens da lista */
+  .institucional-drika li {
+    margin-bottom: 0.4rem;       /* Espaço menor entre os itens */
+  }
+
+  /* Reduz tamanho do ícone editorial */
+  .institucional-drika li::before {
+    font-size: 0.9rem;           /* Ícone menor para não ocupar muito espaço */
+  }
+}
+
+/* Smartphones médios (até 480px) */
+@media screen and (max-width: 480px) {
+  /* Títulos levemente maiores para telas médias */
+  .institucional-drika h2,
+  .institucional-drika h3,
+  .institucional-drika h4 {
+    font-size: 1.3rem;
+  }
+
+  /* Texto um pouco maior para melhor leitura */
+  .institucional-drika p {
+    font-size: 0.95rem;
+  }
+
+  /* Ícone editorial ajustado para acompanhar o texto */
+  .institucional-drika li::before {
+    font-size: 1rem;
+  }
+}
+
+/* Smartphones grandes / phablets (até 600px) */
+@media screen and (max-width: 600px) {
+  /* Títulos com tamanho padrão editorial */
+  .institucional-drika h2,
+  .institucional-drika h3,
+  .institucional-drika h4 {
+    font-size: 1.4rem;
+  }
+
+  /* Texto com tamanho base para leitura fluida */
+  .institucional-drika p {
+    font-size: 1rem;
+  }
+}
+
+/* Tablets pequenos (até 768px) */
+@media screen and (max-width: 768px) {
+  /* Títulos maiores para telas de tablet */
+  .institucional-drika h2,
+  .institucional-drika h3,
+  .institucional-drika h4 {
+    font-size: 1.5rem;
+  }
+
+  /* Texto levemente ampliado para leitura editorial */
+  .institucional-drika p {
+    font-size: 1.05rem;
+  }
+}
+
+/* Tablets grandes / notebooks compactos (até 992px) */
+@media screen and (max-width: 992px) {
+  /* Títulos com presença editorial em telas médias */
+  .institucional-drika h2,
+  .institucional-drika h3,
+  .institucional-drika h4 {
+    font-size: 1.6rem;
+  }
+
+  /* Texto ampliado para leitura confortável */
+  .institucional-drika p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Notebooks médios (até 1200px) */
+@media screen and (max-width: 1200px) {
+  /* Títulos com destaque editorial */
+  .institucional-drika h2,
+  .institucional-drika h3,
+  .institucional-drika h4 {
+    font-size: 1.7rem;
+  }
+
+  /* Texto com proporção editorial */
+  .institucional-drika p {
+    font-size: 1.125rem;
+  }
+}
+
+/* Desktops grandes (até 1440px) */
+@media screen and (max-width: 1440px) {
+  /* Títulos com presença visual em monitores full HD */
+  .institucional-drika h2,
+  .institucional-drika h3,
+  .institucional-drika h4 {
+    font-size: 1.8rem;
+  }
+
+  /* Texto editorial ampliado */
+  .institucional-drika p {
+    font-size: 1.15rem;
+  }
+}
+
+/* Ultrawides (acima de 1920px) */
+@media screen and (min-width: 1921px) {
+  /* Títulos com destaque editorial em telas ultra largas */
+  .institucional-drika h2,
+  .institucional-drika h3,
+  .institucional-drika h4 {
+    font-size: 2rem;             /* Títulos com presença editorial */
+    margin-bottom: 1.2rem;       /* Espaço maior abaixo dos títulos */
+  }
+
+  /* Texto ampliado para leitura confortável */
+  .institucional-drika p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+  }
+
+  /* Lista com espaçamento editorial */
+  .institucional-drika ul {
+    padding-left: 2rem;          /* Recuo maior para destaque dos itens */
+    margin-bottom: 2rem;         /* Espaço editorial abaixo da lista */
+  }
+
+  /* Itens da lista com texto ampliado */
+  .institucional-drika li {
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  /* Ícone editorial ampliado */
+  .institucional-drika li::before {
+    font-size: 1.2rem;
+  }
+}

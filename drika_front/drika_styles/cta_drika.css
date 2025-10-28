@@ -1,0 +1,150 @@
+/* ← Chamada para ação editorial */
+/* Deus, Tu és Senhor e Rei e integrante da Equipe HopeUp 7.DEV, por isso se faça presente aqui também, Senhor. */
+
+/* Container principal da seção CTA (Call to Action) */
+.cta-drika {
+  position: relative; /* Permite sobreposição de elementos se necessário */
+  padding: 4rem 2rem; /* Espaçamento interno generoso para destaque */
+  text-align: center; /* Centraliza todo o conteúdo */
+  background-image: url('../imgs_drika/imagem_fundo.png'); /* Fundo visual com textura editorial */
+  background-size: cover; /* Cobre toda a área da seção */
+  background-position: bottom center; /* Alinha o fundo para baixo e centralizado */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  opacity: 0.95; /* Leve transparência para integração com o layout */
+  z-index: 1; /* Garante que fique acima de fundos esfumados */
+}
+
+/* Título principal da CTA */
+.cta-drika h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem); /* Tamanho fluido entre 1.8rem e 2.5rem */
+  color: #2c2c2c; /* Tom editorial escuro */
+  margin-bottom: 1rem; /* Espaço abaixo do título */
+}
+
+/* Legenda abaixo do título */
+.cta-legenda {
+  font-size: clamp(1rem, 1.2vw, 1.125rem); /* Tamanho fluido e legível */
+  color: #444; /* Tom neutro escuro */
+  margin-bottom: 2rem; /* Espaço abaixo da legenda */
+  font-style: italic; /* Estilo editorial sutil */
+}
+
+/* Container dos botões */
+.botoes-cta {
+  display: flex; /* Alinha os botões em linha */
+  justify-content: center; /* Centraliza horizontalmente */
+  gap: 1.5rem; /* Espaço entre os botões */
+}
+
+/* Estilo dos botões */
+.botoes-cta button {
+  background-color: #6a4fb3; /* Roxo editorial */
+  color: #fff; /* Texto branco para contraste */
+  border: none; /* Remove borda padrão */
+  padding: 0.75rem 1.5rem; /* Espaçamento interno confortável */
+  font-size: 1rem; /* Tamanho de texto padrão */
+  border-radius: 8px; /* Bordas arredondadas suaves */
+  cursor: pointer; /* Cursor de clique */
+  box-shadow: 0 4px 8px rgba(106, 79, 179, 0.3); /* Sombra leve com tom do botão */
+  transition: background-color 0.3s ease; /* Suaviza mudança de cor no hover */
+}
+
+/* Efeito hover nos botões */
+.botoes-cta button:hover {
+  background-color: #5a3fa0; /* Tom mais escuro ao passar o mouse */
+}
+/* Smartphones pequenos (até 400px) */
+@media screen and (max-width: 400px) {
+  .cta-drika {
+    padding: 2rem 1rem;
+  }
+
+  .botoes-cta {
+    flex-direction: column; /* Empilha os botões verticalmente */
+    gap: 1rem;
+  }
+
+  .botoes-cta button {
+    width: 100%; /* Ocupa toda a largura disponível */
+  }
+}
+
+/* Smartphones médios (até 480px) */
+@media screen and (max-width: 480px) {
+  .cta-drika {
+    padding: 2.5rem 1.2rem;
+  }
+
+  .botoes-cta {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
+
+/* Smartphones grandes / phablets (até 600px) */
+@media screen and (max-width: 600px) {
+  .cta-drika {
+    padding: 3rem 1.5rem;
+  }
+
+  .botoes-cta {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* Tablets pequenos (até 768px) */
+@media screen and (max-width: 768px) {
+  .cta-drika {
+    padding: 3.5rem 2rem;
+  }
+
+  .botoes-cta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+}
+
+/* Tablets grandes / notebooks compactos (até 992px) */
+@media screen and (max-width: 992px) {
+  .cta-drika {
+    padding: 4rem 2.5rem;
+  }
+}
+
+/* Notebooks médios (até 1200px) */
+@media screen and (max-width: 1200px) {
+  .cta-drika {
+    padding: 4.5rem 3rem;
+  }
+}
+
+/* Desktops grandes (até 1440px) */
+@media screen and (max-width: 1440px) {
+  .cta-drika {
+    padding: 5rem 3.5rem;
+  }
+}
+
+/* Ultrawides (acima de 1920px) */
+@media screen and (min-width: 1921px) {
+  .cta-drika {
+    padding: 6rem 4rem;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .cta-drika h2 {
+    font-size: 3rem;
+  }
+
+  .cta-legenda {
+    font-size: 1.25rem;
+  }
+
+  .botoes-cta button {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+  }
+}

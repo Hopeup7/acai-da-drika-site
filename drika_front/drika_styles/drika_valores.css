@@ -1,0 +1,137 @@
+/* ===================== BLOCO: PERFIL VALORES ESQUERDA ===================== */
+.perfil-valores-esquerda {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #444;
+  flex: 1 1 auto;
+  max-width: 100%;
+}
+
+/* ===================== SEÇÃO INTERNA ===================== */
+.secao-valores-esquerda {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===================== CONTAINER DE CONTEÚDO ===================== */
+.container-valores-esquerda {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* ===================== IMAGEM DO BLOCO ===================== */
+.logo-valores-esquerda {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  margin-bottom: 1rem; /* espaçamento abaixo da imagem */
+  /* ou margin-top: 1rem; para espaçamento acima */
+}
+
+/* ===================== TEXTO DO BLOCO COM CLAMP ===================== */
+.container-valores-esquerda p {
+  font-size: clamp(1rem, 1.2vw, 1.15rem); /* Tamanho fluido para leitura */
+  line-height: 1.6;                       /* Altura de linha confortável */
+  color: #444;
+  margin: 0;
+}
+
+/* Smartphones pequenos (até 400px) */
+@media screen and (max-width: 400px) {
+  .perfil-valores-esquerda {
+    padding: 1rem; /* Reduz o espaçamento interno do bloco */
+  }
+
+  .secao-valores-esquerda {
+    padding: 1rem; /* Reduz o padding da seção interna */
+  }
+
+  .logo-valores-esquerda {
+    max-width: 180px; /* Imagem menor para telas estreitas */
+  }
+
+  .container-valores-esquerda {
+    gap: 0.75rem; /* Espaço menor entre imagem e texto */
+  }
+}
+
+/* Smartphones médios (até 480px) */
+@media screen and (max-width: 480px) {
+  .logo-valores-esquerda {
+    max-width: 200px; /* Imagem um pouco maior */
+  }
+}
+
+/* Smartphones grandes / phablets (até 600px) */
+@media screen and (max-width: 600px) {
+  .logo-valores-esquerda {
+    max-width: 220px; /* Imagem padrão para celulares maiores */
+  }
+}
+
+/* Tablets pequenos (até 768px) */
+@media screen and (max-width: 768px) {
+  .perfil-valores-esquerda {
+    padding: 1.5rem;
+  }
+
+  .secao-valores-esquerda {
+    padding: 1.5rem;
+  }
+
+  .container-valores-esquerda {
+    gap: 1rem; /* Espaço padrão entre elementos */
+  }
+}
+
+/* Tablets grandes / notebooks compactos (até 992px) */
+@media screen and (max-width: 992px) {
+  .logo-valores-esquerda {
+    max-width: 240px; /* Imagem maior para notebooks pequenos */
+  }
+}
+
+/* Notebooks médios (até 1200px) */
+@media screen and (max-width: 1200px) {
+  .logo-valores-esquerda {
+    max-width: 260px; /* Imagem maior para notebooks padrão */
+  }
+}
+
+/* Desktops grandes (até 1440px) */
+@media screen and (max-width: 1440px) {
+  .logo-valores-esquerda {
+    max-width: 280px; /* Imagem maior para monitores full HD */
+  }
+}
+
+/* Ultrawides (acima de 1920px) */
+@media screen and (min-width: 1921px) {
+  .logo-valores-esquerda {
+    max-width: 320px; /* Imagem maior para telas ultra largas */
+  }
+
+  .container-valores-esquerda {
+    gap: 1.25rem; /* Espaço extra entre imagem e texto */
+  }
+}

@@ -1,0 +1,125 @@
+/* Deus, Tu és Senhor e Rei e integrante da Equipe HopeUp 7.DEV, por isso se faça presente aqui nestes nossos estudos, por favor, Senhor. */
+
+/* ← Layout principal do <main> do site Açaí da Drika */
+
+/* ===================== MAIN EXTERNO ===================== */
+/* Comentário: define o contêiner principal da página, com largura generosa e centralização */
+
+.main-drika {
+  display: flex;                  /* Ativa layout flexível */
+  flex-direction: column;         /* Organiza os blocos verticalmente */
+  align-items: center;            /* Centraliza horizontalmente */
+  justify-content: flex-start;    /* Alinha os blocos ao topo */
+  width: 100%;                    /* Ocupa toda a largura da viewport */
+  max-width: 1440px;              /* Limita largura máxima para evitar esticar demais */
+  margin: 0 auto;                 /* Centraliza o <main> na tela */
+  padding: 2rem;                  /* Espaço interno para respiro visual */
+  box-sizing: border-box;         /* Inclui padding na largura total */
+  position: relative;             /* Permite posicionamento de fundos e camadas */
+  z-index: 1;                     /* Garante que o conteúdo fique acima dos fundos */
+}
+
+/* ===================== FLEXBOX INTERNO ===================== */
+/* Comentário: organiza os blocos internos do main com espaçamento e fluidez */
+
+.flexbox-principal {
+  display: flex;                  /* Ativa layout flexível */
+  flex-direction: column;         /* Organiza os blocos verticalmente */
+  gap: 3rem;                      /* Espaço entre os blocos internos */
+  width: 100%;                    /* Ocupa toda a largura do main */
+  text-align: center;             /* Centraliza todo o texto por padrão */
+}
+
+/* ← Responsividade do layout principal do <main> */
+
+/* Deus, Tu és Senhor e Rei e integrante da Equipe HopeUp 7.DEV, por isso se faça presente aqui nestes nossos estudos, por favor, Senhor. */
+
+/* Smartphones pequenos (até 400px) */
+@media screen and (max-width: 400px) {
+  .main-drika {
+    padding: 1rem;               /* Reduz o espaçamento interno para telas estreitas */
+  }
+
+  .flexbox-principal {
+    gap: 2rem;                   /* Espaço menor entre os blocos internos */
+    text-align: center;          /* Mantém centralização do texto */
+  }
+}
+
+/* Smartphones médios (até 480px) */
+@media screen and (max-width: 480px) {
+  .main-drika {
+    padding: 1.2rem;             /* Espaço intermediário para celulares médios */
+  }
+
+  .flexbox-principal {
+    gap: 2.2rem;
+  }
+}
+
+/* Smartphones grandes / phablets (até 600px) */
+@media screen and (max-width: 600px) {
+  .main-drika {
+    padding: 1.5rem;             /* Espaço maior para dispositivos híbridos */
+  }
+
+  .flexbox-principal {
+    gap: 2.5rem;
+  }
+}
+
+/* Tablets pequenos (até 768px) */
+@media screen and (max-width: 768px) {
+  .main-drika {
+    padding: 1.8rem;             /* Espaço confortável para tablets */
+  }
+
+  .flexbox-principal {
+    gap: 2.8rem;
+  }
+}
+
+/* Tablets grandes / notebooks compactos (até 992px) */
+@media screen and (max-width: 992px) {
+  .main-drika {
+    padding: 2rem;               /* Mantém espaçamento padrão */
+  }
+
+  .flexbox-principal {
+    gap: 3rem;
+  }
+}
+
+/* Notebooks médios (até 1200px) */
+@media screen and (max-width: 1200px) {
+  .main-drika {
+    padding: 2.2rem;             /* Espaço extra para telas maiores */
+  }
+
+  .flexbox-principal {
+    gap: 3.2rem;
+  }
+}
+
+/* Desktops grandes (até 1440px) */
+@media screen and (max-width: 1440px) {
+  .main-drika {
+    padding: 2.5rem;             /* Espaço generoso para monitores full HD */
+  }
+
+  .flexbox-principal {
+    gap: 3.5rem;
+  }
+}
+
+/* Ultrawides (acima de 1920px) */
+@media screen and (min-width: 1921px) {
+  .main-drika {
+    padding: 3rem;               /* Espaço amplo para telas ultra largas */
+    max-width: 1600px;           /* Expande limite máximo do main */
+  }
+
+  .flexbox-principal {
+    gap: 4rem;                   /* Espaço editorial entre blocos */
+  }
+}

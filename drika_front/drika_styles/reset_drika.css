@@ -1,0 +1,88 @@
+/* ← Reset universal de estilos */
+/* Deus, Tu és Senhor e Rei e integrante da Equipe HopeUp 7.DEV, por isso se faça presente aqui nestes nossos estudos, por favor, Senhor. */
+
+/* ===================== RESET BÁSICO ===================== */
+/* Comentário: remove margens e preenchimentos padrão dos navegadores */
+
+* {
+  margin: 0;                    /* Remove todas as margens padrão */
+  padding: 0;                   /* Remove todos os preenchimentos padrão */
+  box-sizing: border-box;       /* Inclui padding e borda no cálculo de largura/altura */
+}
+
+/* ===================== RESET DO BODY ===================== */
+/* Comentário: define estilo base para o corpo da página */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* Fonte moderna e legível, com fallback seguro */
+
+  line-height: 1.6;             /* Altura de linha confortável para leitura */
+  background-color: #f9f9f9;    /* Fundo neutro e suave */
+  color: #333;                  /* Texto em cinza escuro para contraste sem agressividade */
+
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  /* Tamanho fluido da fonte:
+     - mínimo: 1rem (16px)
+     - ideal: 1.2vw (1.2% da largura da viewport)
+     - máximo: 1.125rem (18px) */
+}
+
+/* ===================== MEDIA QUERIES ===================== */
+/* Comentário: ajustes finos para responsividade do reset base */
+
+/* Smartphones pequenos (até 400px) */
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 15px;            /* Fonte levemente menor para telas estreitas */
+  }
+}
+
+/* Smartphones médios (até 480px) */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 15.5px;          /* Ajuste fino para celulares médios */
+  }
+}
+
+/* Smartphones grandes / phablets (até 600px) */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 16px;            /* Fonte padrão para dispositivos híbridos */
+  }
+}
+
+/* Tablets pequenos (até 768px) */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;            /* Mantém legibilidade em tablets */
+  }
+}
+
+/* Tablets grandes / notebooks compactos (até 992px) */
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 16.5px;          /* Leve aumento para notebooks pequenos */
+  }
+}
+
+/* Notebooks médios (até 1200px) */
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 17px;            /* Fonte maior para conforto em telas médias */
+  }
+}
+
+/* Desktops grandes (até 1440px) */
+@media screen and (max-width: 1440px) {
+  body {
+    font-size: 17.5px;          /* Fonte editorial para monitores full HD */
+  }
+}
+
+/* Ultrawides (acima de 1920px) */
+@media screen and (min-width: 1921px) {
+  body {
+    font-size: 18px;            /* Fonte ampla para telas ultra largas */
+  }
+}
