@@ -1,9 +1,7 @@
 /* ===================== TÍTULOS INSTITUCIONAIS ===================== */
 /* Define estilo editorial para títulos dentro da seção institucional */
 
-.institucional-drika h2,
-.institucional-drika h3,
-.institucional-drika h4 {
+.institucional-drika h2 {
   font-family: 'Segoe UI', sans-serif; /* Fonte moderna e legível */
   font-weight: 600;                    /* Peso médio para destaque */
   color: #2c2c2c;                      /* Tom escuro editorial */
@@ -20,31 +18,6 @@
   margin-bottom: 1rem;                    /* Espaço abaixo do parágrafo */
 }
 
-/* ===================== LISTAS INSTITUCIONAIS ===================== */
-/* Define estilo para listas editoriais com ícones personalizados */
-
-.institucional-drika ul {
-  padding-left: 1.5rem;                   /* Recuo interno para alinhamento dos itens */
-  margin-bottom: 1.5rem;                  /* Espaço abaixo da lista */
-  list-style: none;                       /* Remove os marcadores padrão (bolinhas) */
-}
-
-/* ===================== ITENS DE LISTA ===================== */
-/* Define estilo para cada item da lista institucional */
-
-.institucional-drika li {
-  margin-bottom: 0.5rem;                  /* Espaço entre os itens */
-  color: #444;                            /* Tom escuro suave para texto */
-}
-
-/* ======== ÍCONES PERSONALIZADOS ================ */
-/* Adiciona um símbolo editorial antes de cada item da lista */
-
-.institucional-drika li::before {
-  content: "✦ ";                          /* Símbolo editorial personalizado */
-  color: #6a4fb3;                         /* Tom roxo editorial para destaque */
-  font-weight: bold;                     /* Peso forte para o ícone */
-}
 /* ======= MEDIA QUERIES: INSTITUCIONAL DRIKA ========= */
 /* Ajustes progressivos para responsividade e legibilidade em diferentes tamanhos de tela */
 

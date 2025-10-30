@@ -8,7 +8,7 @@
   left: 0;
   width: 100%; /* Ocupa toda a largura */
   height: 100%; /* Ocupa toda a altura */
-  background: linear-gradient(to bottom right, #fbeee0, #fddcc3); /* Gradiente suave */
+  background: linear-gradient(to bottom right, #c68ff0, #749be3); /* Gradiente suave */
   opacity: 0.3; /* Transparência para não competir com o conteúdo */
   z-index: 0; /* Fica atrás dos demais elementos */
 }
@@ -20,17 +20,19 @@
   align-items: center; /* Centraliza verticalmente */
   justify-content: center; /* Centraliza horizontalmente */
   overflow: hidden; /* Esconde conteúdo que ultrapassa os limites */
-  padding: 1rem; /* Espaçamento interno */
+  padding: 1rem 3rem; /* Espaçamento interno */
   background-color: rgba(255, 255, 255, 0.50); /* leve transparência */
-  /*border-radius: 15px;  Bordas arredondadas para estética suave */
   box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Sombra leve para profundidade */
+  z-index: 2; /* Garante que fique acima do fundo */
+
 }
 
 /* Área que agrupa os itens do carrossel */
 .carrossel-itens {
   display: flex; /* Alinha os artigos em linha */
   gap: 2rem; /* Espaçamento entre os itens */
-  transition: transform 0.5s ease; /* Suaviza transições de movimento */
+  transition: transform 0.5s ease, height 0.5s ease; /* Suaviza transições de movimento */
+
 }
 
 /* Estilo base de cada item do carrossel */
@@ -43,6 +45,7 @@
   transform: scale(0.95); /* Leve redução para destacar o ativo */
   transition: all 0.3s ease; /* Suaviza qualquer mudança de estado */
   display: none; /* Esconde todos os itens por padrão */
+  min-height: 420px; /* Mantém altura estável entre itens */
 }
 
 /* Estilo aplicado ao item ativo (em destaque) */
@@ -57,91 +60,116 @@
   width: 100%; /* Ocupa toda a largura do item */
   border-radius: 15px; /* Bordas arredondadas para estética suave */
   box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra para destacar a imagem */
+  max-width: 320px; /* Limita largura máxima para evitar estouro */
+  height: auto; /* Mantém proporção da imagem */
+  margin: 0 auto; /* Centraliza horizontalmente */
 }
-
-/* Legenda abaixo da imagem */
 .carrossel-legenda {
-  margin-top: 0.5rem; /* Espaço entre imagem e texto */
-  font-size: 1rem; /* Tamanho de fonte padrão */
-  color: #5a2d0c; /* Tom terroso para combinar com tema de açaí */
-  font-weight: 500; /* Peso médio para destaque */
+  margin-top: 0.5rem; /* Espaço entre imagem e legenda */
+  font-size: 1rem; /* Tamanho padrão */
+  color: #5a2d0c; /* Tom editorial */
+  font-weight: 500; /* Destaque médio */
+  word-break: break-word; /* Quebra segura */
+  overflow-wrap: break-word; /* Garante fluidez */
+  padding: 0 0.75rem; /* Espaço lateral ampliado */
+  text-align: center; /* Centraliza texto */
+  min-height: 3.5rem; /* Altura uniforme */
+  display: flex; /* Permite centralização vertical */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Empilha texto e link verticalmente */
+  gap: 0.3rem; /* Espaço entre texto e link */
 }
 
-/* Botões de navegação (setas esquerda e direita) */
+/* Estilo para links dentro da legenda */
+.carrossel-legenda a {
+  color: #6a4fb3; /* Roxo editorial */
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.1rem 0.2rem; /* Espaço interno para não ficar colado */
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.carrossel-legenda a:hover {
+  background-color: #f3e5ff; /* Fundo suave ao passar o mouse */
+}
+
 .seta-esquerda,
 .seta-direita {
-  background-color: #ffddc1; /* Tom pastel para suavidade visual */
-  border: none; /* Remove borda padrão */
-  font-size: 2rem; /* Tamanho grande para acessibilidade */
-  padding: 0.5rem 1rem; /* Espaçamento interno confortável */
-  cursor: pointer; /* Cursor de clique */
-  border-radius: 50%; /* Botão circular */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* Sombra para profundidade */
-  z-index: 1; /* Fica acima do fundo */
-  transition: background-color 0.3s ease; /* Suaviza mudança de cor */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: rgba(103, 4, 202, 0.773); /* Mais visível */
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.2rem 0.4rem;
+  cursor: pointer;
+  z-index: 3;
+  transition: color 0.3s ease;
 }
 
-/* Efeito hover nos botões de navegação */
 .seta-esquerda:hover,
 .seta-direita:hover {
-  background-color: #ffcba4; /* Tom mais quente ao passar o mouse */
+  color: rgba(122, 12, 177, 0.8);
 }
-/* ===================== MEDIA QUERIES: CARROSSEL DRIKA ===================== */
-/* Responsividade completa para o carrossel editorial de imagens de açaí */
 
-/* Smartphones pequenos (até 400px) */
-@media screen and (max-width: 400px) {
-  /* Reduz o espaço interno do container para telas muito estreitas */
-  .carrossel-container {
-    padding: 0.5rem;
-  }
+.seta-esquerda {
+  left: 0.5rem; /* Dentro da área visível */
+}
 
-  /* Diminui a largura dos itens para melhor encaixe */
+.seta-direita {
+  right: 0.5rem;
+}
+
+
+/* ===================== MEDIA QUERIES: RESPONSIVIDADE DO CARROSSEL ===================== */
+
+/* iPhone 8 e telas muito pequenas */
+@media screen and (max-width: 380px) {
   .carrossel-item {
-    min-width: 220px;
-    max-width: 220px;
+    max-width: 220px; /* Reduz largura do item */
   }
 
-  /* Ajusta o tamanho da legenda para caber melhor */
+  .carrossel-img-oficial {
+    max-width: 220px; /* Reduz imagem */
+  }
+
   .carrossel-legenda {
-    font-size: 0.9rem;
+    font-size: 0.85rem; /* Fonte menor para caber melhor */
+    padding: 0 0.5rem; /* Mantém espaçamento lateral */
   }
 
-  /* Reduz tamanho e espaçamento dos botões de navegação */
   .seta-esquerda,
   .seta-direita {
-    font-size: 1.5rem;
-    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem; /* Setas menores */
+    padding: 0.3rem 0.6rem; /* Espaço reduzido */
   }
 }
 
 /* Smartphones médios (até 480px) */
 @media screen and (max-width: 480px) {
-  /* Espaço interno um pouco maior para telas médias */
   .carrossel-container {
-    padding: 0.8rem;
+    padding: 0.8rem; /* Espaço interno ajustado */
   }
 
-  /* Largura intermediária dos itens */
   .carrossel-item {
     min-width: 240px;
     max-width: 240px;
   }
 
-  /* Legenda levemente maior */
   .carrossel-legenda {
     font-size: 0.95rem;
   }
 }
 
-/* Smartphones grandes / phablets (até 600px) */
+/* Phablets (até 600px) */
 @media screen and (max-width: 600px) {
-  /* Espaço interno confortável para phablets */
   .carrossel-container {
     padding: 1rem;
   }
 
-  /* Largura padrão para boa visualização */
   .carrossel-item {
     min-width: 250px;
     max-width: 250px;
@@ -150,31 +178,26 @@
 
 /* Tablets pequenos (até 768px) */
 @media screen and (max-width: 768px) {
-  /* Espaço interno mais generoso para tablets */
   .carrossel-container {
     padding: 1.2rem;
   }
 
-  /* Mantém largura padrão dos itens */
   .carrossel-item {
     min-width: 260px;
     max-width: 260px;
   }
 
-  /* Legenda em tamanho editorial padrão */
   .carrossel-legenda {
     font-size: 1rem;
   }
 }
 
-/* Tablets grandes / notebooks compactos (até 992px) */
+/* Notebooks compactos (até 992px) */
 @media screen and (max-width: 992px) {
-  /* Espaço interno ampliado para notebooks pequenos */
   .carrossel-container {
     padding: 1.5rem;
   }
 
-  /* Largura maior dos itens para telas médias */
   .carrossel-item {
     min-width: 280px;
     max-width: 280px;
@@ -183,12 +206,10 @@
 
 /* Notebooks médios (até 1200px) */
 @media screen and (max-width: 1200px) {
-  /* Espaço interno editorial para notebooks padrão */
   .carrossel-container {
     padding: 1.8rem;
   }
 
-  /* Largura ideal para imagens em destaque */
   .carrossel-item {
     min-width: 300px;
     max-width: 300px;
@@ -197,18 +218,15 @@
 
 /* Desktops grandes (até 1440px) */
 @media screen and (max-width: 1440px) {
-  /* Espaço interno generoso para monitores full HD */
   .carrossel-container {
     padding: 2rem;
   }
 
-  /* Largura ampliada para imagens com mais detalhes */
   .carrossel-item {
     min-width: 320px;
     max-width: 320px;
   }
 
-  /* Legenda levemente maior para melhor leitura */
   .carrossel-legenda {
     font-size: 1.05rem;
   }
@@ -216,36 +234,35 @@
 
 /* Ultrawides (acima de 1920px) */
 @media screen and (min-width: 1921px) {
-  /* Espaço editorial amplo para telas ultra largas */
   .carrossel-container {
     padding: 2.5rem;
-    max-width: 1600px; /* Limita largura para não esticar demais */
+    max-width: 1600px; /* Limita largura máxima */
     margin: 0 auto; /* Centraliza o carrossel */
   }
 
-  /* Largura máxima dos itens para destaque visual */
   .carrossel-item {
     min-width: 340px;
     max-width: 340px;
   }
 
-  /* Legenda editorial ampliada */
   .carrossel-legenda {
     font-size: 1.1rem;
   }
 
-  /* Botões maiores para navegação confortável */
   .seta-esquerda,
   .seta-direita {
     font-size: 2.2rem;
     padding: 0.6rem 1.2rem;
   }
 }
-
-.carrossel_drika,
-.fundo-carrossel,
-.carrossel-container {
-  outline: 1px dashed green;
+/*.carrossel_drika {
+  outline: 2px dashed green;  Contorno verde 
 }
 
+.carrossel-container {
+  outline: 2px dashed red;  Contorno vermelho 
+}
 
+.carrossel-item.ativo {
+  outline: 2px dashed purple; Contorno roxo para o item ativo
+}*/

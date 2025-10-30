@@ -23,7 +23,7 @@
   margin-top: 12px;                            /* Espaço acima do bloco */
   flex-wrap: wrap;                             /* Permite quebra de linha em telas menores */
   color: #eceef3;                              /* Mantém tom claro */
-  font-size: clamp(1rem, 1.2vw, 1.1rem);       /* Tamanho fluido para texto da equipe */
+  font-size: clamp(0.85rem, 1vw, 1rem);       /* Tamanho fluido para texto da equipe */
 }
 
 /* ===================== LOGO SUAVE ===================== */
@@ -34,6 +34,7 @@
   opacity: 0.6;                                /* Transparência leve para suavidade */
   transition: opacity 0.3s ease;              /* Transição suave ao passar o mouse */
   vertical-align: middle;                      /* Alinha verticalmente com o texto */
+  font-size: clamp(0.85rem, 1vw, 1rem);       /* Tamanho fluido para texto da equipe */
 }
 
 /* Efeito hover no logo */
@@ -46,7 +47,7 @@
 
 .footer-drika p {
   all: unset;                                  /* Remove herança de estilos globais */
-  font-size: clamp(1rem, 1.2vw, 1.1rem);       /* Tamanho fluido para texto institucional */
+  font-size: clamp(0.85rem, 1vw, 1rem);       /* Tamanho fluido para texto institucional */
   color: #eceef3;                              /* Mantém tom claro */
   margin-bottom: 1rem;                         /* Espaço abaixo do texto */
 }
@@ -192,4 +193,9 @@
   .logo-footer-powered {
     height: 44px;            /* Logo ampliada para acompanhar o destaque do texto */
   }
+}
+.footer-drika,
+.footer-drika p,
+.powered-by {
+  font-size: clamp(0.9rem, 1vw, 1rem); /* Tamanho fluido e igual pra todos */
 }
