@@ -86,3 +86,10 @@ body {
     font-size: 18px;            /* Fonte ampla para telas ultra largas */
   }
 }
+/* DEBUG VISUAL — ATIVAR EM CASO DE TESTE DE LAYOUT */
+/*
+* {
+  outline: 1px solid red;
+}
+*/
+

@@ -242,3 +242,10 @@
   }
 }
 
+.carrossel_drika,
+.fundo-carrossel,
+.carrossel-container {
+  outline: 1px dashed green;
+}
+
+

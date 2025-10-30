@@ -1,0 +1,177 @@
+@media print {
+  /* Oculta elementos do site na impressão */
+  header, /* Oculta o cabeçalho */
+  main, /* Oculta o conteúdo principal */
+  footer, /* Oculta o rodapé */
+  .carrossel-drika, /* Oculta o carrossel */
+  .institucional-drika, /* Oculta a seção institucional */
+  .cta-drika, /* Oculta chamadas para ação */
+  button { /* Oculta botões */
+    display: none !important; /* Garante que não apareçam */
+    visibility: hidden !important; /* Garante que fiquem invisíveis */
+  }
+
+  html, body {
+    margin: 0 !important; /* Remove margens padrão */
+    padding: 0 !important; /* Remove preenchimento padrão */
+    background: white !important; /* Fundo branco para impressão */
+    font-size: 13px !important; /* Tamanho de fonte base para legibilidade */
+    font-family: 'Segoe UI', sans-serif !important; /* Fonte padrão do flyer */
+  }
+
+  /* Exibe frente e verso do flyer com layout centralizado */
+  .pagina-frente,
+  .pagina-verso {
+    display: flex !important; /* Usa flexbox para alinhamento */
+    justify-content: center !important; /* Centraliza horizontalmente */
+    align-items: center !important; /* Centraliza verticalmente */
+    flex-direction: column !important; /* Empilha elementos verticalmente */
+    visibility: visible !important; /* Garante que estejam visíveis */
+    width: 100% !important; /* Ocupa toda a largura da página */
+    min-height: 100vh !important; /* Altura mínima de uma página */
+    margin: 0 !important; /* Remove margens */
+    padding: 0 !important; /* Remove preenchimento */
+    background-image: url('../imgs_drika/imagem_fundo.png') !important; /* Aplica imagem de fundo */
+    background-size: cover !important; /* Cobre toda a área */
+    background-position: center !important; /* Centraliza a imagem */
+    background-repeat: no-repeat !important; /* Evita repetição da imagem */
+    color: #2c2c2c !important; /* Cor padrão do texto */
+  }
+
+  .pagina-frente {
+    page-break-after: always !important; /* Garante quebra de página após frente */
+  }
+
+  .pagina-frente .flyer-container {
+    display: flex !important; /* Layout flexível */
+    justify-content: center !important; /* Centraliza horizontalmente */
+    align-items: center !important; /* Centraliza verticalmente */
+    flex-direction: column !important; /* Empilha verticalmente */
+    width: 100% !important; /* Ocupa toda a largura */
+    padding: 4cm 0 !important; /* Espaçamento vertical generoso */
+    box-sizing: border-box !important; /* Inclui padding na largura total */
+    background: transparent !important; /* Fundo transparente */
+  }
+
+  .flyer-logo {
+    width: 400px !important; /* Largura do logo */
+    max-width: 100% !important; /* Responsivo */
+    margin: 0 auto !important; /* Centraliza horizontalmente */
+    border-radius: 50% !important; /* Deixa o logo circular */
+  }
+
+  .pagina-verso {
+    page-break-after: avoid !important; /* Evita quebra de página após verso */
+    /*padding: 1cm !important; Espaçamento interno */
+    padding-top: 1cm !important; /* Remove espaço superior */
+  }
+
+  .flyer-container {
+    width: 100% !important; /* Ocupa toda a largura */
+    max-width: 700px !important; /* Limita largura máxima */
+    padding: 1cm !important; /* Espaçamento interno */
+    box-sizing: border-box !important; /* Inclui padding na largura */
+    background: transparent !important; /* Fundo transparente */
+  }
+
+  .flyer-container-1 {
+    display: flex !important; /* Layout flexível */
+    justify-content: center !important; /* Centraliza horizontalmente */
+    align-items: center !important; /* Centraliza verticalmente */
+    flex-direction: column !important; /* Empilha verticalmente */
+    width: 100% !important; /* Ocupa toda a largura */
+    margin-bottom: 2rem !important; /* Espaço abaixo do logo */
+    margin-top: -2cm !important; /* Garante que a imagem fique colada no topo */
+    
+  }
+
+  .flyer-logo-1 {
+    width: 160px !important; /* Largura do logo verso */
+    height: 180px !important; /* Altura do logo verso */
+    max-width: 100% !important; /* Responsivo */
+    margin: 0 auto !important; /* Centraliza horizontalmente */
+    border-radius: 15% !important; /* Cantos arredondados */
+  }
+
+  .flyer-subtitulo,
+  .pagina-verso h2 {
+    font-size: 1.4rem !important; /* Tamanho do subtítulo */
+    font-weight: 600 !important; /* Peso da fonte */
+    color: #6a4fb3 !important; /* Cor roxa personalizada */
+    margin-bottom: 1rem !important; /* Espaço abaixo */
+    text-align: center !important; /* Centraliza texto */
+  }
+
+  .pagina-verso h3 {
+    font-size: 1.2rem !important; /* Tamanho do telefone */
+    font-weight: 600 !important; /* Peso da fonte */
+    color: #2a0540 !important; /* Cor escura */
+    margin-bottom: 1.5rem !important; /* Espaço abaixo */
+    text-align: center !important; /* Centraliza texto */
+    text-decoration: underline !important; /* Sublinha o telefone */
+  }
+
+  .pagina-verso h4 {
+    font-size: 1rem !important; /* Tamanho do texto de acompanhamento */
+    font-weight: 600 !important; /* Peso da fonte */
+    color: #2a0540 !important; /* Cor escura */
+    margin-bottom: 1rem !important; /* Espaço abaixo */
+    text-align: center !important; /* Centraliza texto */
+  }
+
+  .pagina-verso p,
+  .flyer-frase {
+    font-size: 1rem !important; /* Tamanho do parágrafo */
+    line-height: 1.4 !important; /* Altura da linha */
+    color: #6a4fb3 !important; /* Cor roxa */
+    font-weight: 500 !important; /* Peso da fonte */
+    text-align: center !important; /* Centraliza texto */
+    margin: 0.8rem 0 !important; /* Espaçamento vertical */
+  }
+
+  .flyer-cardapio {
+    display: flex !important; /* Layout flexível */
+    flex-direction: column !important; /* Empilha verticalmente */
+    align-items: center !important; /* Centraliza horizontalmente */
+    text-align: center !important; /* Centraliza texto */
+    padding-left: 0 !important; /* Remove recuo à esquerda */
+    margin-bottom: 1.2rem !important; /* Espaço abaixo da lista */
+    list-style: none !important; /* Remove marcadores padrão */
+  }
+
+  .flyer-cardapio li {
+    font-size: 1rem !important; /* Tamanho dos itens */
+    margin-bottom: 0.4rem !important; /* Espaço entre itens */
+    color: #444 !important; /* Cor do texto */
+    position: relative !important; /* Necessário para o ícone ✦ */
+    padding-left: 1.2rem !important; /* Espaço para o ícone ✦ */
+}
+
+  .flyer-cardapio li::before {
+    content: "✦" !important; /* Marcador duplo */
+    position: absolute !important; /* Posiciona sobre o item */
+    left: 0 !important; /* Alinha à esquerda */
+    color: #6a4fb3 !important; /* Cor do ícone */
+    font-weight: bold !important; /* Peso do ícone */
+    font-size: 0.9rem !important; /* Tamanho do ícone */
+  }
+  .flyer-subtitulo-1 {
+    font-size: 1.4rem !important; /* Tamanho do subtítulo */
+    font-weight: 600 !important;
+    color: #6a4fb3 !important;
+    margin-top: 2rem !important; /* Desce o bloco */
+    margin-bottom: 0.6rem !important; /* Espaço abaixo */
+    text-align: center !important;
+  }
+
+  .flyer-subtitulo-2 {
+    font-size: 1.6rem !important; /* Tamanho maior para destaque */
+    font-weight: 700 !important; /* Peso extra para impacto */
+    color: #2a0540 !important;
+    margin-bottom: 0 !important; /* Remove espaço abaixo */
+    margin-top: 0.4rem !important; /* Espaço entre título e telefone */
+    text-align: center !important;
+    text-decoration: underline !important;
+    letter-spacing: 0.1rem !important; /* Alarga visualmente o número */
+  }
+}

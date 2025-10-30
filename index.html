@@ -16,7 +16,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <link rel="stylesheet" href="drika_front/drika_print/drika_print.css" media="print">
+  <link rel="stylesheet" href="drika_front/drika_prints/drika_print.css" media="print">
 
 </head>
 
@@ -171,7 +171,7 @@
 
         <!-- Chamada para ação: dois botões -->
         <section class="cta-drika">
-        <h2>Experimente o verdadeiro sabor</h2>
+        <h2>Experimente o<br>verdadeiro sabor</h2>
         <p class="cta-legenda">Cada combinação é um convite à alegria. Escolha seu momento, compartilhe com quem você ama.</p>
 
         <div class="botoes-cta">
@@ -188,14 +188,45 @@
     </div>
     </main>
 
-<!-- Referência ao JavaScript personalizado -->
-<script src="drika_front/drika_scripts/drika.js"></script>
 
-</body>
+ <!-- Seção do flyer para impressão -->
+    <section class="pagina-frente">
+    <div class="flyer-container">
+        <!-- Logo da Drika -->
+        <img src="drika_front/imgs_drika/logo_flyer.png" alt="Logo Açaí da Drika" class="flyer-logo" />
+       </div>
+    </section>
 
+  <!-- Verso do flyer -->
+    <section class="pagina-verso">
+    <div class="flyer-container">
+        <div class="flyer-container-1">
+        <!-- Logo Verso Garrafas Açaí da Drika -->
+        <img src="drika_front/imgs_drika/açai_gar_drika.png" alt="Logo Açaí da Drika" class="flyer-logo-1" />
+       </div>
+        <h2 class="flyer-subtitulo"><em>Monte do seu jeito</em></h2>
+        <ul class="flyer-cardapio">
+        <li>✦ Açaí 300ml — R$10</li>
+        <li>✦ Açaí 500ml — R$15</li>
+        <li>✦ Açaí 1L — R$20</li>
+        <li>✦ Açaí 1.5L — R$25</li>
+        <li>✦ Açaí 2L — R$30</li>
+        <li>✦ Açaí 3L — R$50</li>
+        </ul>
 
+        <h4>Todos acompanham: Leite Ninho, Paçoca, Fruta à escolher, Nutella, Granola e um delicioso Açaí</h4>
+        <p>Adicionais: ✦Leite Ninho, ✦Paçoca, ✦Fruta à escolher, ✦Nutella, ✦Granola, ✦Sonho de Valsa, ✦M&M`s, ✦Calda, ✦Canudo Doce</p>
 
-<!-- Rodapé -->
+        <p class="flyer-frase"><em>Açaí que abraça. Açaí que entrega.</p>
+        <h2 class="flyer-subtitulo-1">Peça já o seu!</h2>
+        <h3 class="flyer-subtitulo-2">Açaí da Drika 55 11 98083-9210 </h3>
+        <!-- <img src="drika_front/imgs_drika/qrcode_whatsapp.png" alt="QR Code para pedidos" class="flyer-qrcode" /> -->
+    </div>
+    <button onclick="window.print()">🖨️ Imprimir flyer</button>
+
+    </section>
+
+    <!-- Rodapé -->
     <footer class="footer-drika">
     <p>© 2025 Açai da Drika - Todos os direitos reservados</p>
     <div class="powered-by">
@@ -203,3 +234,10 @@
         <span>© Equipe Powered By HopeUp 7.DEV</span>
     </div>
     </footer>
+
+    <!-- Referência ao JavaScript personalizado -->
+    <script src="drika_front/drika_scripts/drika.js"></script>
+</body>
+
+   
+

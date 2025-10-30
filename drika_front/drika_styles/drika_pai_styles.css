@@ -17,4 +17,11 @@
 @import url('footer_drika.css');
 
 /* ===================== IMPRESSÃO ===================== */
-@import url('drika_print.css');
+@import url('../drika_prints/drika_print.css');
+
+.pagina-frente,
+.pagina-verso {
+  display: none!important;
+}
+
+

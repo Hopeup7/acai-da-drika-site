@@ -37,7 +37,7 @@
   color: #444;                            /* Tom escuro suave para texto */
 }
 
-/* ===================== ÍCONES PERSONALIZADOS ===================== */
+/* ======== ÍCONES PERSONALIZADOS ================ */
 /* Adiciona um símbolo editorial antes de cada item da lista */
 
 .institucional-drika li::before {
@@ -45,10 +45,9 @@
   color: #6a4fb3;                         /* Tom roxo editorial para destaque */
   font-weight: bold;                     /* Peso forte para o ícone */
 }
-/* ===================== MEDIA QUERIES: INSTITUCIONAL DRIKA ===================== */
+/* ======= MEDIA QUERIES: INSTITUCIONAL DRIKA ========= */
 /* Ajustes progressivos para responsividade e legibilidade em diferentes tamanhos de tela */
-/* ===================== MEDIA QUERIES: INSTITUCIONAL DRIKA ===================== */
-/* Ajustes progressivos para responsividade e legibilidade em diferentes tamanhos de tela */
+
 
 /* Smartphones pequenos (até 400px) */
 @media screen and (max-width: 400px) {
