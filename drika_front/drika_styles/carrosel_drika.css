@@ -46,6 +46,7 @@
   transition: all 0.3s ease; /* Suaviza qualquer mudança de estado */
   display: none; /* Esconde todos os itens por padrão */
   min-height: 420px; /* Mantém altura estável entre itens */
+  position: relative; /* Necessário para posicionar as setas dentro do item */
 }
 
 /* Estilo aplicado ao item ativo (em destaque) */
@@ -61,26 +62,31 @@
   border-radius: 15px; /* Bordas arredondadas para estética suave */
   box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Sombra para destacar a imagem */
   max-width: 320px; /* Limita largura máxima para evitar estouro */
-  height: auto; /* Mantém proporção da imagem */
+  height: 100; /* Mantém proporção da imagem */
   margin: 0 auto; /* Centraliza horizontalmente */
 }
 .carrossel-legenda {
-  margin-top: 0.5rem; /* Espaço entre imagem e legenda */
-  font-size: 1rem; /* Tamanho padrão */
-  color: #5a2d0c; /* Tom editorial */
-  font-weight: 500; /* Destaque médio */
-  word-break: break-word; /* Quebra segura */
-  overflow-wrap: break-word; /* Garante fluidez */
-  padding: 0 0.75rem; /* Espaço lateral ampliado */
-  text-align: center; /* Centraliza texto */
-  min-height: 3.5rem; /* Altura uniforme */
-  display: flex; /* Permite centralização vertical */
+  display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column; /* Empilha texto e link verticalmente */
-  gap: 0.3rem; /* Espaço entre texto e link */
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #5a2d0c;
+  font-weight: 500;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  min-height: 4rem;
+  background-color: transparent;
+  position: relative;
 }
 
+.carrossel-legenda span {
+  flex: 1;
+  text-align: center;
+  padding: 0 0.5rem; /* Dá respiro lateral ao texto */
+}
 /* Estilo para links dentro da legenda */
 .carrossel-legenda a {
   color: #6a4fb3; /* Roxo editorial */
@@ -94,19 +100,26 @@
 .carrossel-legenda a:hover {
   background-color: #f3e5ff; /* Fundo suave ao passar o mouse */
 }
+/*setas de navegação*/
+.legenda-conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  gap: 0.3rem;
+  text-align: center;
+}
+
 
 .seta-esquerda,
 .seta-direita {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   background-color: transparent;
-  color: rgba(103, 4, 202, 0.773); /* Mais visível */
+  color: rgba(103, 4, 202, 0.6);
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   padding: 0.2rem 0.4rem;
   cursor: pointer;
-  z-index: 3;
   transition: color 0.3s ease;
 }
 
@@ -137,14 +150,15 @@
   }
 
   .carrossel-legenda {
-    font-size: 0.85rem; /* Fonte menor para caber melhor */
-    padding: 0 0.5rem; /* Mantém espaçamento lateral */
+    font-size: 0.70rem;
+    padding: 0.1rem 0.5rem; /* Reduz espaço lateral */
+    gap: 0.3rem; /* Aproxima os elementos */
   }
 
   .seta-esquerda,
   .seta-direita {
-    font-size: 1.2rem; /* Setas menores */
-    padding: 0.3rem 0.6rem; /* Espaço reduzido */
+    font-size: 1rem; /* Setas menores */
+    padding: 0.2rem 0.5rem; /* Espaço reduzido */
   }
 }
 

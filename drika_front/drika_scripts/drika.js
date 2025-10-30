@@ -2,53 +2,36 @@
 
 // ===================== FUNCIONALIDADE DO CARROSSEL DRIKA =====================
 
-// Aguarda o carregamento completo do DOM antes de executar o código
 document.addEventListener("DOMContentLoaded", () => {
-  // Seleciona todos os elementos com a classe .carrossel-item (os slides)
+  // Seleciona todos os itens do carrossel
   const itens = document.querySelectorAll(".carrossel-item");
 
-  // Seleciona o botão de navegação esquerda (←)
-  const btnEsquerda = document.querySelector(".seta-esquerda");
-
-  // Seleciona o botão de navegação direita (→)
-  const btnDireita = document.querySelector(".seta-direita");
-
-  // Define o índice atual do item visível no carrossel (inicia no primeiro)
+  // Define o índice do item atualmente visível
   let indexAtual = 0;
 
-  // Função que atualiza o carrossel, mostrando apenas o item ativo
-  function atualizarCarrossel() {
-    // Percorre todos os itens do carrossel
+  // Função que mostra apenas o item ativo
+  function mostrarItem(index) {
     itens.forEach((item, i) => {
-      // Remove a classe "ativo" de todos os itens
-      item.classList.remove("ativo");
-
-      // Adiciona a classe "ativo" apenas ao item correspondente ao índice atual
-      if (i === indexAtual) {
-        item.classList.add("ativo");
-      }
+      item.classList.toggle("ativo", i === index);
     });
   }
 
-  // Evento de clique no botão esquerdo (←)
-  btnEsquerda.addEventListener("click", () => {
-    // Decrementa o índice atual, voltando um item
-    // O cálculo com módulo (%) garante que o índice nunca fique fora do intervalo
-    indexAtual = (indexAtual - 1 + itens.length) % itens.length;
-
-    // Atualiza o carrossel com o novo índice
-    atualizarCarrossel();
+  // Aplica evento a todos os botões de seta esquerda
+  document.querySelectorAll(".seta-esquerda").forEach(botao => {
+    botao.addEventListener("click", () => {
+      indexAtual = (indexAtual - 1 + itens.length) % itens.length;
+      mostrarItem(indexAtual);
+    });
   });
 
-  // Evento de clique no botão direito (→)
-  btnDireita.addEventListener("click", () => {
-    // Incrementa o índice atual, avançando um item
-    indexAtual = (indexAtual + 1) % itens.length;
-
-    // Atualiza o carrossel com o novo índice
-    atualizarCarrossel();
+  // Aplica evento a todos os botões de seta direita
+  document.querySelectorAll(".seta-direita").forEach(botao => {
+    botao.addEventListener("click", () => {
+      indexAtual = (indexAtual + 1) % itens.length;
+      mostrarItem(indexAtual);
+    });
   });
 
-  // Chama a função uma vez ao carregar a página para exibir o primeiro item
-  atualizarCarrossel();
+  // Exibe o primeiro item ao carregar a página
+  mostrarItem(indexAtual);
 });
